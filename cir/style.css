@@ -1,0 +1,54 @@
+body {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.borde, .borde-2, .borde-3, .borde-4 {
+    width: 400px; /* Círculos grandes */
+    height: 400px;
+    border-width: 8px; /* Bordes delgados */
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
+                0 0 60px rgba(255, 255, 255, 0.3); /* Brillo neón */
+    animation: rotate 6s infinite linear;
+}
+
+/* Bordes con gradientes para colores vibrantes */
+.borde {
+    border-image: conic-gradient(crimson, cyan, lime, crimson) 1; /* Gradiente cíclico */
+    animation-delay: 0s;
+}
+
+.borde-2 {
+    border-image: conic-gradient(lime, orange, purple, lime) 1;
+    transform: translate(-50px);
+    animation-delay: 0.5s;
+}
+
+.borde-3 {
+    border-image: conic-gradient(yellow, blue, magenta, yellow) 1;
+    transform: translate(-100px);
+    animation-delay: 1s;
+}
+
+.borde-4 {
+    border-image: conic-gradient(pink, cyan, purple, pink) 1;
+    transform: translate(-150px);
+    animation-delay: 1.5s;
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
